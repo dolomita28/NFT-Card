@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+:root{
+--softblue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+
+--dark1: hsl(217, 54%, 11%);
+--dark2: hsl(216, 50%, 16%);
+--dark3: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--dark1);
+}
+h1{
+    color:var(--white);
+}
+.p{
+    font-size: 1.8rem;
+    color:var(--softblue);
+} 
+.container{
+ margin:8rem auto;
+ 
+}
+.card{
+    background-color:  var(--dark2);
+    padding:2rem;
+    width: 35rem;
+    margin:2rem auto;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    box-shadow: 0 10px 30px rgb(18, 19, 35);
+}
+.card-img{
+    border-radius: 0.5rem;
+}
+.card > h1{
+    margin:2rem 0;    
+    font-size: 300;
+}
+.card > p,.creator{
+    font-size: 1.8rem;    
+    font-weight: 300;
+    line-height: 2rem;
+    color:var(--softblue);
+}
+.details{  
+    margin-top:2rem;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.details-price{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.details-price > span{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color:var(--cyan);
+    margin:0 0.5rem;
+}
+.details-days{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.details-days > span{
+    font-size: 1.8rem;
+    color:var(--softblue);
+    margin:0 0.5rem;
+}
+.line{
+    margin:2rem 0;
+    border-top:1px solid var(--softblue); 
+}
+.creation{   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.creation > img{
+    width:4rem;    
+    outline: 1px solid var(--white);
+    height: auto;
+    border-radius: 50%;
+}
+.creator{
+    margin-left: 2rem;
+    transform: translateY(0.5rem);
+    font-size: 1.5rem;
+}
+.creator > a{
+    color:var(--white);
+}
+.attribution { font-size: 11px; text-align: center;color:var(--cyan)}
+.attribution a { color: var(--white)}
