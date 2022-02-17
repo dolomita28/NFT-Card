@@ -22,6 +22,11 @@ html {
 body {
   font-family: "Outfit", sans-serif;
   background-color: var(--dark1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 h1{
     color:var(--white);
@@ -38,20 +43,42 @@ h1{
     background-color:  var(--dark2);
     padding:2rem;
     width: 35rem;
-    margin:2rem auto;
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: space-around;
     box-shadow: 0 10px 30px rgb(18, 19, 35);
+    
 }
-.card-img{
-    border-radius: 0.5rem;
+.card-img,.card-overlay{
+    border-radius: 0.5rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.card-img>img{
+    width: 100%;
+}
+.card-img:hover .card-overlay{
+    transition: 0.15s ease-in-out;    
+    background-color: var(--cyan);
+    opacity: 0.5;
+}
+.card-overlay{
+    opacity: 0;
+    position: absolute;  
+    width: 100%; 
+    height: 100%;
 }
 .card > h1{
     margin:2rem 0;    
     font-size: 300;
+}
+.card > h1:hover{
+    color: var(--cyan);
+    transition: all .2;
 }
 .card > p,.creator{
     font-size: 1.8rem;    
@@ -108,6 +135,9 @@ h1{
 }
 .creator > a{
     color:var(--white);
+}
+.creator > a:hover{
+    color: var(--cyan);
 }
 .attribution { font-size: 11px; text-align: center;color:var(--cyan)}
 .attribution a { color: var(--white)}
